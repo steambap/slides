@@ -1,0 +1,48 @@
+{
+  "name": "slides",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env app=npm webpack-dev-server --hot -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steambap/slides.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/steambap/slides/issues"
+  },
+  "homepage": "https://github.com/steambap/slides#readme",
+  "dependencies": {
+    "babel-core": "^5.0.0",
+    "babel-loader": "^5.3.2",
+    "bespoke": "^1.0.0",
+    "bespoke-backdrop": "^1.0.0",
+    "bespoke-hash": "^1.0.2",
+    "bespoke-keys": "^1.1.0",
+    "bespoke-progress": "^1.0.0",
+    "bespoke-scale": "^1.0.1",
+    "bespoke-theme-cube": "^2.0.1",
+    "bespoke-theme-nebula": "^1.0.1",
+    "bespoke-theme-terminal": "^1.0.1",
+    "bespoke-touch": "^1.0.0",
+    "cross-env": "^5.0.1",
+    "css-loader": "^0.19.0",
+    "file-loader": "^0.8.4",
+    "gh-pages": "^0.12.0",
+    "highlight.js": "^8.8.0",
+    "html-loader": "^0.3.0",
+    "html-webpack-plugin": "^1.6.1",
+    "markdown-loader": "^0.1.7",
+    "offline-plugin": "^4.6.1",
+    "react": "^0.13.3",
+    "style-loader": "^0.12.4",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.0.0"
+  }
+}
