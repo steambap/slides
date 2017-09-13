@@ -53,5 +53,9 @@ module.exports = env => APPS.filter(APP => !env || !env.app || env.app === APP).
 			title: APP
 		}),
 		env && env.prod && new OfflinePlugin()
-	].filter(Boolean)
+	].filter(Boolean),
+	devServer: {
+		host: "0.0.0.0",
+		disableHostCheck: true
+	}
 }));
