@@ -33,6 +33,7 @@
   "poi": {
     "presets": [
       "react"
-    ]
+    ],
+    "port": 4400
   }
 }
