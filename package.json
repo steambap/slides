@@ -20,15 +20,15 @@
   },
   "homepage": "https://github.com/steambap/slides#readme",
   "dependencies": {
-    "normalize.css": "^7.0.0",
+    "normalize.css": "^8.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "spectacle": "^3.0.0"
+    "spectacle": "^5.1.0"
   },
   "devDependencies": {
     "poi": "^9.4.3",
     "poi-preset-react": "^9.1.0",
-    "serve": "^6.3.1"
+    "serve": "^10.0.0"
   },
   "poi": {
     "presets": [

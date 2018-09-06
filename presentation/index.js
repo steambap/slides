@@ -22,7 +22,7 @@ import createTheme from 'spectacle/lib/themes/default'
 
 // Require CSS
 import 'normalize.css'
-import 'spectacle/lib/themes/default/index.css'
+import 'spectacle/lib/themes/default/index.js'
 
 // Preloading images
 const images = {}
