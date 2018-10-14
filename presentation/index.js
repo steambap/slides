@@ -1,5 +1,5 @@
 // Import React
-import React from 'react'
+import React from "react";
 
 // Import Spectacle Core tags
 import {
@@ -11,93 +11,91 @@ import {
   List,
   Quote,
   Slide,
-  Text
-} from 'spectacle'
-
-// Import image preloader util
-import preloader from 'spectacle/lib/utils/preloader'
+  Text,
+  Link,
+  CodePane
+} from "spectacle";
 
 // Import theme
-import createTheme from 'spectacle/lib/themes/default'
+import createTheme from "spectacle/lib/themes/default";
+
+import codeExample from "./example.js";
 
 // Require CSS
-import 'normalize.css'
-import 'spectacle/lib/themes/default/index.js'
-
-// Preloading images
-const images = {}
-preloader(images)
+require("normalize.css");
 
 const theme = createTheme(
   {
-    primary: 'white',
-    secondary: '#1F2022',
-    tertiary: '#03A9FC',
-    quartenary: '#CECECE'
+    primary: "white",
+    secondary: "#1F2022",
+    tertiary: "#03A9FC",
+    quaternary: "#CECECE"
   },
   {
-    primary: 'Montserrat',
-    secondary: 'Helvetica'
+    primary: "Helvetica",
+    secondary: "Helvetica"
   }
-)
+);
 
 export default class Presentation extends React.Component {
   render() {
     return (
       <Deck
-        transition={['zoom', 'slide']}
+        transition={["zoom", "slide"]}
         transitionDuration={500}
         theme={theme}
       >
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            My Presentation
+            WebAssembly 介绍
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            Started!
+            一种运行在现代浏览器中的新型代码
           </Text>
         </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Typography
-          </Heading>
-          <Heading size={1} textColor="secondary">
-            Heading 1
-          </Heading>
-          <Heading size={2} textColor="secondary">
-            Heading 2
-          </Heading>
-          <Heading size={3} textColor="secondary">
-            Heading 3
-          </Heading>
-          <Heading size={4} textColor="secondary">
-            Heading 4
-          </Heading>
-          <Heading size={5} textColor="secondary">
-            Heading 5
-          </Heading>
-          <Text size={6} textColor="secondary">
-            Standard text
-          </Text>
-        </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+        <Slide transition={["fade"]} bgColor="primary" textColor="1F2022">
           <Heading size={6} textColor="secondary" caps>
-            Standard List
+            WebAssembly 是什么？
           </Heading>
+          <Text margin="10px 0 0" size={6} textColor="tertiary" fit>
+              *https://developer.mozilla.org/en-US/docs/WebAssembly/Concepts
+          </Text>
           <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+            <ListItem>一种运行在现代浏览器中的新型代码</ListItem>
+            <ListItem>运行效率更高</ListItem>
+            <ListItem>
+              为 C/C++/Rust 这样的底层编程语言提供一种高效的编译目标
+            </ListItem>
+            <ListItem>WebAssembly 模块可以被 web 或 node 应用调用</ListItem>
           </List>
         </Slide>
-        <Slide transition={['fade']} bgColor="secondary" textColor="primary">
+        <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
+          <Heading size={6} textColor="secondary" caps>
+            Go/WebAssembly
+          </Heading>
+          <Text margin="10px 0 0" size={6} textColor="tertiary" fit>
+              *https://github.com/golang/go/wiki/WebAssembly
+          </Text>
+          <List>
+            <ListItem>Golang v1.11 添加了对 WebAssembly 的实验性支持</ListItem>
+            <ListItem>Hello, World 文件 1.3Mb</ListItem>
+            <ListItem>没有任何框架，DOM API 调用缺乏抽象</ListItem>
+          </List>
+        </Slide>
+        <Slide bgColor="secondary">
+          <CodePane lang="clike" source={codeExample} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
+            <Quote>
+              Web assembly is going to democratize the frontend. I'm predicting
+              that in 2 years or less, Go, Swift, Rust will be 1/3 of the
+              frontend code
+            </Quote>
+            <Cite>Brian Ketelsen</Cite>
           </BlockQuote>
         </Slide>
       </Deck>
-    )
+    );
   }
 }
