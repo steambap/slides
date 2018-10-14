@@ -3,6 +3,7 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
+  Appear,
   BlockQuote,
   Cite,
   Deck,
@@ -12,7 +13,6 @@ import {
   Quote,
   Slide,
   Text,
-  Link,
   CodePane
 } from "spectacle";
 
@@ -57,29 +57,41 @@ export default class Presentation extends React.Component {
           <Heading size={6} textColor="secondary" caps>
             WebAssembly 是什么？
           </Heading>
-          <Text margin="10px 0 0" size={6} textColor="tertiary" fit>
+          <Appear fid="1">
+            <Text margin="10px 0 0" size={6} textColor="tertiary" fit>
               *https://developer.mozilla.org/en-US/docs/WebAssembly/Concepts
-          </Text>
-          <List>
-            <ListItem>一种运行在现代浏览器中的新型代码</ListItem>
-            <ListItem>运行效率更高</ListItem>
-            <ListItem>
-              为 C/C++/Rust 这样的底层编程语言提供一种高效的编译目标
-            </ListItem>
-            <ListItem>WebAssembly 模块可以被 web 或 node 应用调用</ListItem>
-          </List>
+            </Text>
+          </Appear>
+          <Appear fid="2">
+            <List>
+              <ListItem>一种运行在现代浏览器中的新型代码</ListItem>
+              <ListItem>运行效率更高</ListItem>
+              <ListItem>
+                为 C/C++/Rust 这样的底层编程语言提供一种高效的编译目标
+              </ListItem>
+              <ListItem>WebAssembly 模块可以被 web 或 node 应用调用</ListItem>
+            </List>
+          </Appear>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
           <Heading size={6} textColor="secondary" caps>
             Go/WebAssembly
           </Heading>
           <Text margin="10px 0 0" size={6} textColor="tertiary" fit>
-              *https://github.com/golang/go/wiki/WebAssembly
+            *https://github.com/golang/go/wiki/WebAssembly
           </Text>
           <List>
-            <ListItem>Golang v1.11 添加了对 WebAssembly 的实验性支持</ListItem>
-            <ListItem>Hello, World 文件 1.3Mb</ListItem>
-            <ListItem>没有任何框架，DOM API 调用缺乏抽象</ListItem>
+            <Appear fid="1">
+              <ListItem>
+                Golang v1.11 添加了对 WebAssembly 的实验性支持
+              </ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem>Hello, World 文件 1.3Mb</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem>没有任何框架，DOM API 调用缺乏抽象</ListItem>
+            </Appear>
           </List>
         </Slide>
         <Slide bgColor="secondary">
